@@ -59,10 +59,6 @@ public class KafkaProducerConfig {
         props.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, "0");
         props.put(ProducerConfig.BATCH_SIZE_CONFIG, "0");
 
-
-
-
-
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
                CustomerSerializer.class.getName());
         //props.put(ProducerConfig., "org.apache.kafka.common.serialization.StringSerializer");

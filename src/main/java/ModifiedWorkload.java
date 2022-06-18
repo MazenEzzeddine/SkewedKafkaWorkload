@@ -21,7 +21,6 @@ public class ModifiedWorkload {
     }
 
     public void start() throws InterruptedException {
-
         // send 15 events per second for  two minutes
         Fifteen();
         //increase P0, P1 to 60 linearly for 45 minutes i.e.,
@@ -115,7 +114,6 @@ public class ModifiedWorkload {
 
 
     private void allConstantP0P160P2P3P415For75() throws InterruptedException {
-
         log.info("allConstantP0P160P2P3P415For75");
         Instant start = now();
         Instant end = now();
@@ -197,9 +195,7 @@ public class ModifiedWorkload {
         log.info("allConstantP0P1P260P3P415For75 ");
         Instant start = now();
         Instant end = now();
-
         events = 15;
-
         while (Duration.between(start, end).toSeconds() <= 75) {
             for (int j = 0; j < 60; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
@@ -242,9 +238,7 @@ public class ModifiedWorkload {
         log.info("fifteenEpsIncreaseLinearlyP3AndP0P160P3P4For45 ");
         Instant start = now();
         Instant end = now();
-
         events = 15;
-
         while (Duration.between(start, end).toSeconds() <= 45) {
             for (int j = 0; j < 60; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
@@ -256,16 +250,12 @@ public class ModifiedWorkload {
                         2, System.currentTimeMillis(), UUID.randomUUID().toString(), custm));
 
             }
-
-
             for (int j = 0; j < events; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
                 KafkaProducerExample.producer.send(new ProducerRecord<String, Customer>(KafkaProducerExample.config.getTopic(),
                         3, System.currentTimeMillis(), UUID.randomUUID().toString(), custm));
 
             }
-
-
             for (int j = 0; j < 15; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
                 KafkaProducerExample.producer.send(new ProducerRecord<String, Customer>(KafkaProducerExample.config.getTopic(),
@@ -286,9 +276,7 @@ public class ModifiedWorkload {
         log.info("allConstantP0P1P2P360P415For75");
         Instant start = now();
         Instant end = now();
-
         events = 15;
-
         while (Duration.between(start, end).toSeconds() <= 75) {
             for (int j = 0; j < 60; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
@@ -307,7 +295,6 @@ public class ModifiedWorkload {
                         3, System.currentTimeMillis(), UUID.randomUUID().toString(), custm));
 
             }
-
 
             for (int j = 0; j < 15; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
@@ -328,10 +315,8 @@ public class ModifiedWorkload {
 
 
     public void FifteenEnd() throws InterruptedException {
-
         log.info("I will send 15  events per seconds for each partition for a " +
                 "duration of 2  minutes ");
-
         Instant start = now();
         Instant end = now();
         while (Duration.between(start, end).toSeconds() <= 120) {
@@ -356,8 +341,5 @@ public class ModifiedWorkload {
         }
         log.info("End 15 events per seconds for each partition for 2 minutes");
         log.info("==========================================");
-
     }
-
-
 }

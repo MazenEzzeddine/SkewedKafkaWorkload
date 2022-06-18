@@ -31,14 +31,6 @@ public class KafkaProducerExample {
         log.info("Sending {} messages ...", config.getMessageCount());
 
 
-
-
-/*
-        fifteenEpsToeachPartitonForTwoMinutes();
-        P1P260EPSOthers15EPSForTwoMinutes();
-        P1P2P360EPSOthers15EPSForTwoMinutes();*/
-
-
        // ModifiedWorkload md = new ModifiedWorkload();
 
         OldWorkload.startWorkload();
