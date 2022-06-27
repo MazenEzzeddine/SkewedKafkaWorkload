@@ -19,9 +19,9 @@ public class OldWorkload {
                     Math.ceil(wrld.getDatay().get(i)));
 
             Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
-            int p0 = (int) (0.3 * Math.ceil(wrld.getDatay().get(i)));
-            int p1 = (int) (0.3 * Math.ceil(wrld.getDatay().get(i)));
-            int others = (int) (0.13333 * Math.ceil(wrld.getDatay().get(i)));
+            int p0 = (int) (0.27 * Math.ceil(wrld.getDatay().get(i)));
+            int p1 = (int) (0.27 * Math.ceil(wrld.getDatay().get(i)));
+            int others = (int) (0.153 * Math.ceil(wrld.getDatay().get(i)));
 
             log.info("Sending {} to P0 and P1  and {} to each of the others", p0, others);
 
